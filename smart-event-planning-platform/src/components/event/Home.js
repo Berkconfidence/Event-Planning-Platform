@@ -56,7 +56,7 @@ function Home() {
 
   // Adresi koordinatlara çevirme işlemi
   const getCoordinates = async (address) => {
-    const googleMapsApiKey = "AIzaSyCMkmz6balxwr794m2BGcwQia1BsJ1AHZw";
+    const googleMapsApiKey = "";
     const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${googleMapsApiKey}`;
 
     try {
@@ -306,7 +306,7 @@ function Home() {
 
             {/* Harita */}
             <div className="map-container">
-              <LoadScript googleMapsApiKey="AIzaSyCMkmz6balxwr794m2BGcwQia1BsJ1AHZw">
+              <LoadScript googleMapsApiKey="">
                 <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={{
