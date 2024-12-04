@@ -1,0 +1,127 @@
+/* Tarayıcı varsayılan stilini sıfırla */
+.profile-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .profile-page html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Navbar stili */
+  .profile-page .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Sağ ve sol iç boşluk */
+    background-color: #02366d;
+    color: white;
+    position: fixed; /* Ekranın üstüne yapışık kalır */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ekranın tamamını kapla */
+    z-index: 1000;
+    height: 50px; /* Yükseklik belirle */
+  }
+  
+  .profile-page .navbar-left {
+    display: flex;
+    align-items: center; /* Dikey hizalamayı ortalar */
+    gap: 0.5rem; /* Profil fotoğrafı ile buton arasında boşluk */
+  }
+  
+  .profile-page .navbar-left .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white; /* Çerçeve */
+  }
+  
+  .profile-page .navbar-left .home-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold; /* Buton yazısını daha belirgin yapar */
+    padding: 0.3rem 0.5rem; /* Butona biraz iç boşluk ekler */
+  }
+  
+  .profile-page .navbar-left .home-button:hover {
+    text-decoration: underline; /* Üzerine gelindiğinde altı çizilir */
+  }
+  
+  .profile-page .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .profile-page .add-event-button {
+    background-color: #28a745;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .profile-page .my-events-button {
+    background-color: #28a745;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile-page .profile-menu {
+    position: relative;
+  }
+  
+  .profile-page .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+  
+  .profile-page .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    z-index: 1000;
+  }
+  
+  .profile-page .dropdown-menu.show {
+    display: block;
+  }
+  
+  .profile-page .dropdown-menu p,
+  .dropdown-menu button {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .profile-page .dropdown-menu button:hover,
+  .dropdown-menu p:hover {
+    background-color: #f0f0f0;
+  }
+  

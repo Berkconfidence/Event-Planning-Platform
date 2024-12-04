@@ -1,0 +1,140 @@
+.home-page {
+  min-height: 100vh; /* Ekranın tamamını kapsa */
+  display: flex;
+  flex-direction: column; /* Alt alta dizmek için */
+  justify-content: flex-start; /* Kartları yukarı hizalar */
+  align-items: center; /* Yatay merkezleme */
+  background-color: #f0f0f0;
+  padding: 1rem; /* Kenarlardan biraz boşluk bırak */
+  gap: 1rem; /* Kartlar arasına boşluk ekle */
+  overflow-y: auto; /* Çok fazla kart olursa kaydırma */
+  margin-top: 40px;
+}
+
+.home-page .card-container {
+  width: 45rem;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 8px #999;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  background-color: white;
+  height: fit-content;
+  padding: 1rem;
+  position: relative; /* İkonun kart içi pozisyonunu kontrol eder */
+}
+
+.home-page .expand-icon-container {
+  position: absolute; /* Kartın içine göre konumlanır */
+  bottom: 0.1rem; /* Kartın altından boşluk bırakır */
+  right: 1rem; /* Kartın sağından boşluk bırakır */
+  cursor: pointer; /* İkonun üzerine gelindiğinde imleci el yapar */
+}
+
+.home-page .expand-icon-container svg {
+  font-size: 1.5rem; /* İkonun boyutunu belirler */
+  color: gray; /* Varsayılan renk */
+  transition: color 0.3s ease; /* Hover durumunda geçiş efekti */
+}
+
+.home-page .expand-icon-container svg:hover {
+  color: black; /* Hover durumunda rengi değiştirir */
+}
+
+.home-page .map-container {
+  margin-bottom: 15px; /* Hover durumunda rengi değiştirir */
+  margin-top: 5px;
+}
+
+.home-page .expanded-content {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  animation: expand 0.3s ease-in-out;
+}
+
+@keyframes expand {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.home-page .join-event-button {
+  background-color: #28a745;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 5px;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-page .event-info {
+  margin-bottom: 0.2rem;
+}
+
+.home-page .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Modal'ın diğer tüm öğelerin önünde olmasını sağlar */
+}
+
+.home-page .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Sabit genişlik */
+  max-width: 90%;
+  text-align: center;
+  position: relative; /* İçeriğin yerleşimi için */
+  box-sizing: border-box; /* Padding'in içerikle uyumlu olması için */
+}
+
+/* Giriş alanları */
+.home-page .modal-content input,
+.home-page .modal-content textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Butonlar */
+.home-page .modal-content button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  width: 100%; /* Butonun genişliğini tam yap */
+}
+
+/* Kapatma butonu */
+.home-page .modal-content button[type="button"] {
+  background-color: #f44336;
+}
+
+.home-page .modal-content button:hover {
+  background-color: #45a049;
+}
+
+.home-page .modal-content button[type="button"]:hover {
+  background-color: #e74c3c;
+}
+
